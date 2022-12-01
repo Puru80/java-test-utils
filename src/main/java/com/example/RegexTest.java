@@ -14,7 +14,7 @@ public class RegexTest {
     }
 
     private static boolean isEmailAddressIgnorable(String emailId) {
-        Set<String> possibleStrings = new HashSet<>();
+        Set<String> possibleStrings = new LinkedHashSet<>();
         possibleStrings.add(emailId);
 
         String fromAddressDomainStart = StringUtils.substringBefore(emailId, "@");
@@ -25,18 +25,18 @@ public class RegexTest {
 
         List<String> list = List.of("@*.sbi.*");
 
-        /*for (String val : valpossibleStrings) {
-            System.out.println(val);
-        }*/
-
         for (String val : possibleStrings) {
+            System.out.println(val);
+        }
+
+        /*for (String val : possibleStrings) {
             if (list.contains(val)) {
                 System.out.println(val);
                 return true;
             }
 
         }
-
+*/
         return false;
     }
 
@@ -61,7 +61,6 @@ public class RegexTest {
         String domain = fromAddressDomainStart[0];
         possibleStrings.add("@" + domain + ".*");
 
-//        logger.info("First Loop");
         for (int i = 1; i < fromAddressDomainStart.length; i++) {
             domain = domain.concat(".".concat(fromAddressDomainStart[i]));
 
@@ -75,7 +74,6 @@ public class RegexTest {
         possibleStrings.add("*." + domain);
         possibleStrings.add("@*." + domain);
 
-//        logger.info("Second Loop");
         for (int i = fromAddressDomainStart.length - 2; i >= 0; i--) {
             domain = fromAddressDomainStart[i].concat(".".concat(domain));
 
@@ -85,10 +83,7 @@ public class RegexTest {
 
         possibleStrings.add("@" + domain);
 
-//        logger.info("Third Loop");
-//        logger.info("Size of fromAddressDomainStart: " + fromAddressDomainStart.length);
         for (int i = 0; i < fromAddressDomainStart.length - 1; i++) {
-//            logger.info("In the loop");
             String strNew = "@*." + fromAddressDomainStart[i] + ".*";
             possibleStrings.add(strNew);
         }
