@@ -17,6 +17,7 @@ public class Main {
     private static final String INPUT_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input.csv";
     private static final String OUTPUT_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input-final.csv";
     private static final String OUTPUT_TEST_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input-test.csv";
+    private static final String MERCHANT_FILE = "/Users/puruagarwal/Downloads/PromotionalClassificationMaster-ExclusionMerchants.csv";
     private static final List<String[]> result = new ArrayList<>();
 
     /*public static void verifyRegex(String email, List<String[]> criteriaData){
@@ -54,9 +55,9 @@ public class Main {
         }
     }
 
-    public static void updateEntityType(){
-        for (String[] row: result){
-            if(row[3].equalsIgnoreCase("unknown"))
+    public static void updateEntityType() {
+        for (String[] row : result) {
+            if (row[3].equalsIgnoreCase("unknown"))
                 row[2] = "PROMOTIONAL";
             else row[2] = "TRANSACTIONAL_ORDER";
         }
@@ -72,29 +73,8 @@ public class Main {
             String[] header = {"Email", "Sender", "Category", "Entity"};
             writer.writeNext(header);
 
-            /*int count = 0;
-            List<Integer> list = new ArrayList<>();
-            List<String[]> finalResult = new ArrayList<>();
-
-            for (int i=0;i< result.size();i++) {
-                if(!result.get(i)[2].equalsIgnoreCase("PROMOTIONAL")) {
-                    finalResult.add(result.get(i));
-                    count++;
-                }
-                else list.add(i);
-            }
-
-            Collections.shuffle(list);
-            for(int i=0;i<count;i++)
-                finalResult.add(result.get(list.get(i)));
-
-            Collections.shuffle(finalResult);
-            for(String[]  row: finalResult)
-                writer.writeNext(row);
-                */
-
             Collections.shuffle(result);
-            for(String[] row: result){
+            for (String[] row : result) {
                 writer.writeNext(row);
             }
 
@@ -133,31 +113,36 @@ public class Main {
         saveFile();
     }
 
-    /*
     public static void main(String[] args) {
-        try (FileReader criteriaReader = new FileReader(REGEX_FILE);
-             FileReader inputReader = new FileReader(INPUT_FILE)) {
+//        try (FileReader criteriaReader = new FileReader(REGEX_FILE);
+        try (FileReader inputReader = new FileReader(MERCHANT_FILE)) {
 
-            CSVReader criteriaCSVReader = new CSVReaderBuilder(criteriaReader)
-                    .withSkipLines(1)
-                    .build();
+//            CSVReader criteriaCSVReader = new CSVReaderBuilder(criteriaReader)
+//                    .withSkipLines(1)
+//                    .build();
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
                     .withSkipLines(1)
                     .build();
 
-            List<String[]> criteriaData = criteriaCSVReader.readAll();
+//            List<String[]> criteriaData = criteriaCSVReader.readAll();
             List<String[]> inputData = inputCSVReader.readAll();
 
-            classifyRegex(criteriaData, inputData);
+//            classifyRegex(criteriaData, inputData);
+
+//            String outPut = "INSERT INTO public.classification_strategy (sender, criteria, strategy) VALUES('%s', '{}', 'TRANSACTIONAL_FIRST');";
+            for (String[] arr : inputData) {
+                String outPut = "INSERT INTO public.classification_strategy (sender, criteria, strategy) VALUES('%s', '{}', 'TRANSACTIONAL_FIRST');";
+                System.out.println(String.format(outPut, arr[0]));
+//                System.out.println(arr[0]);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        checkOutput();
+//        checkOutput();
     }
 
-     */
 
     /*public static String toRegex(Iterable<String> strings) {
         return StreamSupport.stream(strings.spliterator(), false)
