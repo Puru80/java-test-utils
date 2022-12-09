@@ -20,15 +20,6 @@ public class Main {
     private static final String MERCHANT_FILE = "/Users/puruagarwal/Downloads/PromotionalClassificationMaster-ExclusionMerchants.csv";
     private static final List<String[]> result = new ArrayList<>();
 
-    /*public static void verifyRegex(String email, List<String[]> criteriaData){
-        for (String[] criteriaRow : criteriaData) {
-            if(Pattern.matches(criteriaRow[2], email)) {
-                System.out.println(true);
-                break;
-            }
-        }
-    }*/
-
     public static void checkOutput() {
         try (FileReader outputReader = new FileReader(OUTPUT_FILE)) {
             CSVReader outputCSVReader = new CSVReaderBuilder(outputReader)
@@ -114,40 +105,22 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//        try (FileReader criteriaReader = new FileReader(REGEX_FILE);
         try (FileReader inputReader = new FileReader(MERCHANT_FILE)) {
 
-//            CSVReader criteriaCSVReader = new CSVReaderBuilder(criteriaReader)
-//                    .withSkipLines(1)
-//                    .build();
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
                     .withSkipLines(1)
                     .build();
 
-//            List<String[]> criteriaData = criteriaCSVReader.readAll();
             List<String[]> inputData = inputCSVReader.readAll();
 
-//            classifyRegex(criteriaData, inputData);
-
-//            String outPut = "INSERT INTO public.classification_strategy (sender, criteria, strategy) VALUES('%s', '{}', 'TRANSACTIONAL_FIRST');";
+            String outPut = "INSERT INTO public.classification_strategy (sender, criteria, strategy) VALUES('%s', '{}', 'TRANSACTIONAL_FIRST');";
             for (String[] arr : inputData) {
-                String outPut = "INSERT INTO public.classification_strategy (sender, criteria, strategy) VALUES('%s', '{}', 'TRANSACTIONAL_FIRST');";
                 System.out.println(String.format(outPut, arr[0]));
-//                System.out.println(arr[0]);
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-//        checkOutput();
     }
-
-
-    /*public static String toRegex(Iterable<String> strings) {
-        return StreamSupport.stream(strings.spliterator(), false)
-                .sorted(Comparator.comparingInt(String::length).reversed())
-                .map(Pattern::quote)
-                .collect(Collectors.joining("|"));
-    }*/
 }
