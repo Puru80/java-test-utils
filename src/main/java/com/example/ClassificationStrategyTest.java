@@ -13,9 +13,9 @@ public class ClassificationStrategyTest {
         classificationStrategy.setName("ClassificationStrategy Object");
         classificationStrategy.setEmailIds(List.of("puru.agar99@gmaill.com", "example@gmail.com"));
 
-        System.out.println(classificationStrategy);
+//        System.out.println(classificationStrategy);
 
         Gson gson = new Gson();
-        System.out.println(gson.toJson(classificationStrategy));
+        System.out.println(gson.toJson("Puru"));
     }
 }
