@@ -8,6 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,6 +19,7 @@ public class Main {
     private static final String OUTPUT_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input-final.csv";
     private static final String OUTPUT_TEST_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input-test.csv";
     private static final String MERCHANT_FILE = "/Users/puruagarwal/Downloads/PromotionalClassificationMaster-ExclusionMerchants.csv";
+    private static final String AVATAR_FILE = "/Users/puruagarwal/Downloads/Rewards-Shopping-Report-Summary.csv";
     private static final List<String[]> result = new ArrayList<>();
 
     public static void checkOutput() {
@@ -105,17 +107,24 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        try (FileReader inputReader = new FileReader(MERCHANT_FILE)) {
+        try (FileReader inputReader = new FileReader(AVATAR_FILE)) {
 
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
-                    .withSkipLines(1)
+//                    .withSkipLines(2)
                     .build();
 
             List<String[]> inputData = inputCSVReader.readAll();
 
             String outPut = "INSERT INTO public.classification_strategy (sender, criteria, strategy) VALUES('%s', '{}', 'TRANSACTIONAL_FIRST');";
+
+            String output = "INSERT INTO public.avatar\n" +
+                    "(\"name\", display_name, image_name, description)\n" +
+                    "VALUES('%s', '%s', '%s', '%s');";
+
+            int i=0;
             for (String[] arr : inputData) {
-                System.out.println(String.format(outPut, arr[0]));
+//                System.out.println(++i);
+                System.out.println(String.format(output, arr[1].toUpperCase(Locale.ROOT), arr[1], arr[1], arr[4]));
             }
 
         } catch (Exception e) {
