@@ -1,10 +1,12 @@
 package com.example;
 
+import com.example.models.AvatarEnum;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVWriter;
 
 import java.io.*;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,10 +16,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    private static final String REGEX_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset - Transactional Mails - Regex - Sheet1.csv";
-    private static final String INPUT_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input.csv";
     private static final String OUTPUT_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input-final.csv";
-    private static final String OUTPUT_TEST_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input-test.csv";
     private static final String MERCHANT_FILE = "/Users/puruagarwal/Downloads/PromotionalClassificationMaster-ExclusionMerchants.csv";
     private static final String AVATAR_FILE = "/Users/puruagarwal/Downloads/Rewards-Shopping-Report-Summary.csv";
     private static final List<String[]> result = new ArrayList<>();
@@ -107,7 +106,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        try (FileReader inputReader = new FileReader(AVATAR_FILE)) {
+        try (FileReader inputReader = new FileReader(MERCHANT_FILE)) {
 
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
 //                    .withSkipLines(2)
@@ -115,21 +114,18 @@ public class Main {
 
             List<String[]> inputData = inputCSVReader.readAll();
 
-            String outPut = "INSERT INTO public.classification_strategy (sender, criteria, strategy) VALUES('%s', '{}', 'TRANSACTIONAL_FIRST');";
+            String output = "INSERT INTO public.email_address_ignore_list\n" +
+                    "(email_address, ignored_by, reason, created_at, updated_at)\n" +
+                    "VALUES('%s', 'FLASH', 'PERSONAL', '%s', '%s');";
 
-            String output = "INSERT INTO public.avatar\n" +
-                    "(\"name\", display_name, image_name, description)\n" +
-                    "VALUES('%s', '%s', '%s', '%s');";
+            String input = "@*.medium.* @*.cloudhq.* @morningbrew.com @gst.gov.in @etretail.com @*.substack.* newsletters@* payslip@* hr@* @google.*";
 
-            int i=0;
-            for (String[] arr : inputData) {
-//                System.out.println(++i);
-                System.out.println(String.format(output, arr[1].toUpperCase(Locale.ROOT), arr[1], arr[1], arr[4]));
+            for (String str : input.split(" ")) {
+                System.out.println(String.format(output, str, OffsetDateTime.now(), OffsetDateTime.now()));
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
