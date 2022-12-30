@@ -1,20 +1,25 @@
 package com.example;
 
-import com.example.models.AvatarEnum;
+import com.example.models.AvatarDescription;
+import com.google.gson.Gson;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVWriter;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+
+    public static final Gson gson = new Gson();
 
     private static final String OUTPUT_FILE = "/Users/puruagarwal/Downloads/Emails/classification_dataset-input-final.csv";
     private static final String MERCHANT_FILE = "/Users/puruagarwal/Downloads/PromotionalClassificationMaster-ExclusionMerchants.csv";
@@ -106,7 +111,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        try (FileReader inputReader = new FileReader(MERCHANT_FILE)) {
+        try (FileReader inputReader = new FileReader(AVATAR_FILE)) {
 
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
 //                    .withSkipLines(2)
@@ -114,19 +119,36 @@ public class Main {
 
             List<String[]> inputData = inputCSVReader.readAll();
 
-            String output = "update public.avatar set image_name = '%s.png' where name = '%s';";
+            String output = "update public.avatar set description = '%s' where name = '%s';";
 
-            String input = "Deurnal Noxx Solark Sundownix Reville Eventiden Siestar Vespier Daysprinz Crepuscules Fortenoon Nightfalt";
+            int i=0;
+            String[] input = "Deurnal Noxx Solark Sundownix Reville Eventiden Siestar Vespier Daysprinz Crepuscules Fortenoon Nightfalt"
+                    .split(" ");
 
-            for (String str : input.split(" ")) {
-                System.out.println(String.format(output, str.toLowerCase(), str.toUpperCase()));
+            for (String[] str : inputData) {
+//                System.out.println(String.format(output, str.toLowerCase(), str.toUpperCase()));
+                String category = str[3].split("\\|")[0];
+                String[] description = str[4].split("\n\n");
+
+                AvatarDescription avatarDescription =AvatarDescription.builder()
+                        .category(category)
+                        .title(description[0])
+                        .info(description[1])
+                        .build();
+
+                String descJson = gson.toJson(avatarDescription);
+
+                System.out.println(String.format(output, descJson, input[i].toUpperCase()));
+                i++;
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
 
-        System.out.println(OffsetDateTime.now().toEpochSecond());
+    public static String getAvatarDescription(){
+        return null;
     }
 }
