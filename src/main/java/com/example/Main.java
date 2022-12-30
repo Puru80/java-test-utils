@@ -10,6 +10,7 @@ import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -113,14 +114,12 @@ public class Main {
 
             List<String[]> inputData = inputCSVReader.readAll();
 
-            String output = "INSERT INTO public.email_address_ignore_list\n" +
-                    "(email_address, ignored_by, reason, created_at, updated_at)\n" +
-                    "VALUES('%s', 'FLASH', 'PERSONAL', '%s', '%s');";
+            String output = "update public.avatar set image_name = '%s.png' where name = '%s';";
 
-            String input = "@*.medium.* @*.cloudhq.* @morningbrew.com @gst.gov.in @etretail.com @*.substack.* newsletters@* payslip@* hr@* @google.*";
+            String input = "Deurnal Noxx Solark Sundownix Reville Eventiden Siestar Vespier Daysprinz Crepuscules Fortenoon Nightfalt";
 
             for (String str : input.split(" ")) {
-                System.out.println(String.format(output, str, OffsetDateTime.now(), OffsetDateTime.now()));
+                System.out.println(String.format(output, str.toLowerCase(), str.toUpperCase()));
             }
 
         } catch (Exception e) {
