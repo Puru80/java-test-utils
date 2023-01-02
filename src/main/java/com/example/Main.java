@@ -109,7 +109,7 @@ public class Main {
         saveFile();
     }
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         try (FileReader inputReader = new FileReader(AVATAR_FILE)) {
 
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
@@ -143,15 +143,5 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }*/
-
-
-    public static String getAvatarDescription(){
-        return null;
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println(Double.parseDouble("2,611.55"));
     }
 }
