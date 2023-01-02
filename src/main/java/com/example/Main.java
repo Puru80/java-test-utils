@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -110,11 +109,10 @@ public class Main {
         saveFile();
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         try (FileReader inputReader = new FileReader(AVATAR_FILE)) {
 
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
-//                    .withSkipLines(2)
                     .build();
 
             List<String[]> inputData = inputCSVReader.readAll();
@@ -127,7 +125,7 @@ public class Main {
 
             for (String[] str : inputData) {
 //                System.out.println(String.format(output, str.toLowerCase(), str.toUpperCase()));
-                String category = str[3].split("\\|")[0];
+                String category = str[3].split("\\|")[0].trim();
                 String[] description = str[4].split("\n\n");
 
                 AvatarDescription avatarDescription =AvatarDescription.builder()
@@ -145,10 +143,15 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 
     public static String getAvatarDescription(){
         return null;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(Double.parseDouble("2,611.55"));
     }
 }
