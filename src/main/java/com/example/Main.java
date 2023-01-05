@@ -25,6 +25,8 @@ public class Main {
     private static final String AVATAR_FILE = "/Users/puruagarwal/Downloads/Rewards-Shopping-Report-Summary.csv";
     private static final List<String[]> result = new ArrayList<>();
 
+    public static String someJson = "{\"start\":\"-PT6H\",\"periodOverride\":\"inherit\",\"widgets\":[{\"metrics\":[[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"UsersLambda\",\"Resource\",\"UsersLambda\",{\"color\":\"#d62728\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"UsersLambda-Errorcount\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Invocations\",\"FunctionName\",\"Resource\",\"UsersLambda\",{\"color\":\"#1f77b4\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"UsersLambda-Invocations\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"UsersLambda\",\"Resource\",\"WaitlistLambda\",{\"color\":\"#d62728\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"WaitlistLambda-Errorcount\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Invocations\",\"FunctionName\",\"Resource\",\"WaitlistLambda\",{\"color\":\"#1f77b4\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"WaitlistLambda-Invocations\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"ReferralLambda\",\"Resource\",\"ReferralLambda\",{\"color\":\"#d62728\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"ReferralLambda-Errorcount\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Invocations\",\"FunctionName\",\"ReferralLambda\",\"Resource\",\"ReferralLambda\",{\"color\":\"#1f77b4\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"ReferralLambda-Invocations\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"DeviceLambda\",\"Resource\",\"DeviceLambda\",{\"color\":\"#d62728\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"DeviceLambda-Errorcount\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Invocations\",\"FunctionName\",\"DeviceLambda\",\"Resource\",\"DeviceLambda\",{\"color\":\"#1f77b4\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"DeviceLambda-Invocations\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"UserFeedsEventHandler\",\"Resource\",\"UserFeedsEventHandler\",{\"color\":\"#d62728\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"UserFeedsEventHandler-Errorcount\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"},{\"metrics\":[[\"AWS/Lambda\",\"Invocations\",\"FunctionName\",\"Resource\",\"UserFeedsEventHandler\",{\"color\":\"#1f77b4\",\"region\":\"ap-south-1\"}]],\"sparkline\":true,\"period\":60,\"region\":\"ap-south-1\",\"title\":\"UserFeedsEventHandler-Invocations\",\"yAxis\":{\"right\":{\"max\":100}},\"view\":\"timeSeries\",\"stacked\":false,\"stat\":\"Sum\"}]}";
+
     public static void checkOutput() {
         try (FileReader outputReader = new FileReader(OUTPUT_FILE)) {
             CSVReader outputCSVReader = new CSVReaderBuilder(outputReader)
@@ -109,7 +111,7 @@ public class Main {
         saveFile();
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         try (FileReader inputReader = new FileReader(AVATAR_FILE)) {
 
             CSVReader inputCSVReader = new CSVReaderBuilder(inputReader)
@@ -143,5 +145,12 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }*/
+
+
+    public static void main(String[] args) {
+        someJson = someJson.replace(" ", "").trim();
+
+        System.out.println(someJson.replace("\n", ""));
     }
 }
