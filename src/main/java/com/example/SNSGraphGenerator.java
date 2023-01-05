@@ -2,14 +2,7 @@ package com.example;
 
 public class SNSGraphGenerator {
 
-    private static String topics = "amplify_codecommit_topic " +
-            "DealEventTopic" +
-            "emailAssociationEventTopic " +
-            "entityEventUpdateTopic " +
-            "entityTrackingUpdateEventTopic " +
-            "flashAccountEventTopic " +
-            "RewardPointsEventTopic " +
-            "sms-otp-login";
+    private static String topics = "";
 
     private static String snsWidgets = "{\n" +
             "            \"height\": 6,\n" +
@@ -33,7 +26,7 @@ public class SNSGraphGenerator {
             "        },";
 
     public static void main(String[] args) {
-        String[] topicArr = topics.split(" ");
+        String[] topicArr = topics.split("\n");
 
         for(String str: topicArr) {
             System.out.println(String.format(snsWidgets, str, str));
