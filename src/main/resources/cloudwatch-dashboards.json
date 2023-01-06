@@ -1,0 +1,4549 @@
+{
+  "flash-app-gateway-api-monitoring": {
+    "widgets": [
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/appConfig/fetch",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/appConfig/fetch - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/appConfig/fetchn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/appConfig/fetch - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/appConfig/fetch",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/appConfig/fetch - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/device/store",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/device/store - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/device/storen",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/device/store - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/device/store",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/device/store - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/device/update",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/device/update - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/device/updaten",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/device/update - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/device/update",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/device/update - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 18,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/gmail/subscribe",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/gmail/subscribe - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 18,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/gmail/subscriben",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/gmail/subscribe - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 18,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/gmail/subscribe",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/gmail/subscribe - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 24,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/inbox",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/inbox - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 24,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/inboxn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/inbox - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 24,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/inbox",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/inbox - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 30,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/mail",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/mail - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 30,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/mailn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/mail - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 30,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/mail",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/mail - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 36,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/mails",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/mails - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 36,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/mailsn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/mails - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 36,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/mails",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/mails - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 42,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/referral/update",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/referral/update - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 42,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/referral/updaten",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/referral/update - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 42,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/referral/update",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/referral/update - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 48,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/flash/create-account",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/flash/create-account - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 48,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/flash/create-accountn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/flash/create-account - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 48,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/flash/create-account",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/flash/create-account - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 54,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/gmail-consent",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/gmail-consent - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 54,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/gmail-consentn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/gmail-consent - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 54,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/gmail-consent",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/gmail-consent - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 60,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/gmail-consent-callback",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/gmail-consent-callback - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 60,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/gmail-consent-callbackn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/gmail-consent-callback - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 60,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/gmail-consent-callback",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/gmail-consent-callback - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 66,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/gmail-onboarding-status",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/gmail-onboarding-status - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 66,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/gmail-onboarding-statusn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/gmail-onboarding-status - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 66,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/gmail-onboarding-status",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/gmail-onboarding-status - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 72,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/insights",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/insights - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 72,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/insightsn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/insights - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 72,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/insights",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/insights - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 78,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/login",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/login - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 78,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/loginn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/login - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 78,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/login",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/login - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 84,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/logout",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/logout - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 84,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/logoutn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/logout - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 84,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/logout",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/logout - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 90,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/profile",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/profile - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 90,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/profilen",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/profile - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 90,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/profile",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/profile - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 96,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/refresh-session",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/refresh-session - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 96,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/refresh-sessionn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/refresh-session - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 96,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/refresh-session",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/refresh-session - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 102,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/user/validate-otp",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/validate-otp - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 102,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/user/validate-otpn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/user/validate-otp - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 102,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/user/validate-otp",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/user/validate-otp - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 108,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/campaigns/deal",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/deal - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 108,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/campaigns/dealn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/deal - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 108,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/campaigns/deal",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/campaigns/deal - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 114,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/campaigns/deals",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/deals - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 114,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/campaigns/dealsn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/deals - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 114,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/campaigns/deals",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/campaigns/deals - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 120,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/campaigns/deals/{groupKey}",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/deals/{groupKey} - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 120,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/campaigns/deals/{groupKey}n",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/deals/{groupKey} - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 120,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/campaigns/deals/{groupKey}",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/campaigns/deals/{groupKey} - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 126,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/campaigns/streaks",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 126,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/campaigns/streaksn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 126,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/campaigns/streaks",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/campaigns/streaks - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 132,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/campaigns/streaks/{id}",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks/{id} - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 132,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/campaigns/streaks/{id}n",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks/{id} - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 132,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/campaigns/streaks/{id}",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/campaigns/streaks/{id} - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 138,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/campaigns/streaks/{id}/history",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks/{id}/history - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 138,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/campaigns/streaks/{id}/historyn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks/{id}/history - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 138,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/campaigns/streaks/{id}/history",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/campaigns/streaks/{id}/history - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 144,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/campaigns/streaks/grouped",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks/grouped - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 144,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/campaigns/streaks/groupedn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/campaigns/streaks/grouped - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 144,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/campaigns/streaks/grouped",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/campaigns/streaks/grouped - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 150,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/rewards/ledger",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/rewards/ledger - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 150,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/rewards/ledgern",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/rewards/ledger - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 150,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/rewards/ledger",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/rewards/ledger - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 156,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/rewards/redeem",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/rewards/redeem - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 156,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/rewards/redeemn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/rewards/redeem - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 156,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/rewards/redeem",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/rewards/redeem - Latency"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 162,
+        "x": 1,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Count",
+              "Resource",
+              "/v1/rewards/summary",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "label": "Invocations"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/rewards/summary - Invocations"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 162,
+        "x": 9,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "4xx",
+              "Resource",
+              "/v1/rewards/summaryn",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#d62728"
+              }
+            ],
+            [
+              ".",
+              "5xx",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              ".",
+              {
+                "color": "#e377c2"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Sum",
+          "period": 60,
+          "title": "/v1/rewards/summary - Error"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 162,
+        "x": 17,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [
+              "AWS/ApiGateway",
+              "Latency",
+              "Resource",
+              "/v1/rewards/summary",
+              "Stage",
+              "$default",
+              "Method",
+              "POST",
+              "ApiId",
+              "5a5b3x6e13",
+              {
+                "color": "#9467bd"
+              }
+            ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "p99",
+          "period": 1,
+          "title": "/v1/rewards/summary - Latency"
+        }
+      }
+    ]
+  },
+
+  "flash-emails-application-lambda-monitoring": {
+    "widgets": [
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "EmailServiceLambda", "Resource", "EmailServiceLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailServiceLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "EmailServiceLambda", "Resource", "EmailServiceLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailServiceLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "GmailUserMailboxServiceLambda", "Resource", "GmailUserMailboxServiceLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailUserMailboxServiceLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "GmailUserMailboxServiceLambda", "Resource", "GmailUserMailboxServiceLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailUserMailboxServiceLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "GmailUserServiceLambda", "Resource", "GmailUserServiceLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailUserServiceLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "GmailUserServiceLambda", "Resource", "GmailUserServiceLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailUserServiceLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "HandleNewFmailLambda", "Resource", "HandleNewFmailLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "HandleNewFmailLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "HandleNewFmailLambda", "Resource", "HandleNewFmailLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "HandleNewFmailLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "WatchSchedulerLambda", "Resource", "WatchSchedulerLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "WatchSchedulerLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "WatchSchedulerLambda", "Resource", "WatchSchedulerLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "WatchSchedulerLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "GmailSubscriptionHTTPEventHandler", "Resource", "GmailSubscriptionHTTPEventHandler", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailSubscriptionHTTPEventHandler - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "GmailSubscriptionHTTPEventHandler", "Resource", "GmailSubscriptionHTTPEventHandler" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailSubscriptionHTTPEventHandler - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 18,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "InboxFeedService", "Resource", "InboxFeedService", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "InboxFeedService - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 18,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "InboxFeedService", "Resource", "InboxFeedService" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "InboxFeedService - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 18,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "EmailCategorizationEventHandler", "Resource", "EmailCategorizationEventHandler", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailCategorizationEventHandler - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 18,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "EmailCategorizationEventHandler", "Resource", "EmailCategorizationEventHandler" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailCategorizationEventHandler - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 24,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "EmailAttachmentHandler", "Resource", "EmailAttachmentHandler", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailAttachmentHandler - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 24,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "EmailAttachmentHandler", "Resource", "EmailAttachmentHandler" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailAttachmentHandler - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 24,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "EmailComposeHandler", "Resource", "EmailComposeHandler", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailComposeHandler - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 24,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "EmailComposeHandler", "Resource", "EmailComposeHandler" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailComposeHandler - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      }
+    ]
+  },
+
+  "flash-emails-application-system-monitoring": {
+    "widgets": [
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Throttles", "FunctionName", "EmailServiceLambda", { "color": "#2ca02c" } ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Duration", ".", ".", { "color": "#1f77b4" } ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "EmailServiceLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "GmailUserMailboxServiceLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailUserMailboxServiceLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Throttles", "FunctionName", "GmailUserServiceLambda", { "color": "#2ca02c" } ],
+            [ ".", "Duration", ".", ".", { "color": "#1f77b4" } ],
+            [ ".", "ConcurrentExecutions", ".", ".", { "color": "#ff7f0e" } ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "GmailUserServiceLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Throttles", "FunctionName", "HandleNewFmailLambda", { "color": "#2ca02c" } ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Duration", ".", ".", { "color": "#1f77b4" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "HandleNewFmailLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "WatchSchedulerLambda", "Resource", "WatchSchedulerLambda" ],
+            [ ".", "ConcurrentExecutions", ".", ".", ".", "." ],
+            [ ".", "Throttles", ".", ".", ".", "." ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Average",
+          "period": 300,
+          "title": "WatchSchedulerLambda - System"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "GmailSubscriptionHTTPEventHandler", "Resource", "GmailSubscriptionHTTPEventHandler" ],
+            [ ".", "ConcurrentExecutions", ".", ".", ".", "." ],
+            [ ".", "Throttles", ".", ".", ".", "." ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Average",
+          "period": 300,
+          "title": "GmailSubscriptionHTTPEventHandler - System"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "InboxFeedService", "Resource", "InboxFeedService" ],
+            [ ".", "ConcurrentExecutions", ".", ".", ".", "." ],
+            [ ".", "Throttles", ".", ".", ".", "." ]
+          ],
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Average",
+          "period": 300,
+          "title": "InboxFeedService - System"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "EmailCategorizationEventHandler", "Resource", "EmailCategorizationEventHandler" ],
+            [ ".", "ConcurrentExecutions", ".", ".", ".", "." ],
+            [ ".", "Throttles", ".", ".", ".", "." ]
+          ],
+          "sparkline": true,
+          "view": "timeSeries",
+          "stacked": false,
+          "region": "ap-south-1",
+          "stat": "Average",
+          "period": 300,
+          "title": "EmailCategorizationEventHandler - System"
+        }
+      }
+    ]
+  },
+
+  "stage-flash-engagement-application-lambda-monitoring": {
+    "widgets": [
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "RewardsLambda", "Resource", "RewardsLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "RewardsLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "RewardsLambda", "Resource", "RewardsLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "RewardsLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "RedemptionPaymentStatusLambda", "Resource", "RedemptionPaymentStatusLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "RedemptionPaymentStatusLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "RedemptionPaymentStatusLambda", "Resource", "RedemptionPaymentStatusLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "RedemptionPaymentStatusLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "DealsLambda", "Resource", "DealsLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "DealsLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "DealsLambda", "Resource", "DealsLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "DealsLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "PackagesLambda", "Resource", "PackagesLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "PackagesLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "PackagesLambda", "Resource", "PackagesLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "PackagesLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "CampaignLambda", "Resource", "CampaignLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CampaignLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "CampaignLambda", "Resource", "CampaignLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CampaignLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "CampaignSQSEventHandler", "Resource", "CampaignSQSEventHandler", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CampaignSQSEventHandler - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "CampaignSQSEventHandler", "Resource", "CampaignSQSEventHandler" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CampaignSQSEventHandler - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      }
+    ]
+  },
+
+  "stage-flash-engagement-application-system-monitoring": {
+    "widgets": [
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "RewardsLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "RewardsLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "RedemptionPaymentStatusLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "RedemptionPaymentStatusLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "DealsLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "DealsLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "PackagesLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "PackagesLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "CampaignLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CampaignLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "CampaignSQSEventHandler" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CampaignSQSEventHandler - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      }
+    ]
+  },
+
+  "stage-flash-users-application-lambda-monitoring": {
+    "widgets": [
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "WaitlistLambda", { "color": "#d62728" } ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "WaitlistLambda - Error Count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "UsersLambda", "Resource", "UsersLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "UsersLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "UsersLambda", "Resource", "UsersLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "UsersLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "WaitlistLambda", "Resource", "WaitlistLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "WaitlistLambda - Invocations",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "ReferralLambda", { "color": "#d62728" } ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "ReferralLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "ReferralLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "ReferralLambda - Invocations",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "DeviceLambda", "Resource", "DeviceLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "DeviceLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "DeviceLambda" ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "DeviceLambda - Invocations",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "FetchCustomersEcommerceInsightsLambda", "Resource", "FetchCustomersEcommerceInsightsLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "FetchCustomersEcommerceInsightsLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "FetchCustomersEcommerceInsightsLambda", "Resource", "FetchCustomersEcommerceInsightsLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "FetchCustomersEcommerceInsightsLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Errors", "FunctionName", "CustomersEcommerceInsightsSQSEventLambda", "Resource", "CustomersEcommerceInsightsSQSEventLambda", { "color": "#d62728" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CustomersEcommerceInsightsSQSEventLambda - Error count",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 12,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Invocations", "FunctionName", "CustomersEcommerceInsightsSQSEventLambda", "Resource", "CustomersEcommerceInsightsSQSEventLambda" ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CustomersEcommerceInsightsSQSEventLambda - Invocations",
+          "view": "timeSeries",
+          "stacked": false
+        }
+      }
+    ]
+  },
+
+  "stage-flash-users-application-system-monitoring": {
+  "widgets": [
+    {
+      "height": 6,
+      "width": 6,
+      "y": 0,
+      "x": 6,
+      "type": "metric",
+      "properties": {
+        "metrics": [
+          [ "AWS/Lambda", "Duration", "FunctionName", "WaitlistLambda" ],
+          [ ".", "ConcurrentExecutions", ".", "." ],
+          [ ".", "Throttles", ".", "." ]
+        ],
+        "period": 60,
+        "region": "ap-south-1",
+        "title": "WaitlistLambda - System",
+        "yAxis": {
+          "right": {
+            "max": 100
+          }
+        },
+        "view": "timeSeries",
+        "stacked": false,
+        "stat": "Sum"
+      }
+    },
+    {
+      "height": 6,
+      "width": 6,
+      "y": 0,
+      "x": 0,
+      "type": "metric",
+      "properties": {
+        "metrics": [
+          [ "AWS/Lambda", "Duration", "FunctionName", "UsersLambda", "Resource", "UsersLambda" ],
+          [ ".", "ConcurrentExecutions", ".", ".", ".", "." ],
+          [ ".", "Throttles", ".", ".", ".", "." ]
+        ],
+        "sparkline": true,
+        "period": 60,
+        "region": "ap-south-1",
+        "title": "UsersLambda - System",
+        "yAxis": {
+          "right": {
+            "max": 100
+          }
+        },
+        "view": "timeSeries",
+        "stacked": false,
+        "stat": "Sum"
+      }
+    },
+    {
+      "height": 6,
+      "width": 6,
+      "y": 0,
+      "x": 12,
+      "type": "metric",
+      "properties": {
+        "metrics": [
+          [ "AWS/Lambda", "Duration", "FunctionName", "ReferralLambda" ],
+          [ ".", "ConcurrentExecutions", ".", "." ],
+          [ ".", "Throttles", ".", "." ]
+        ],
+        "period": 60,
+        "region": "ap-south-1",
+        "title": "ReferralLambda - System",
+        "yAxis": {
+          "right": {
+            "max": 100
+          }
+        },
+        "view": "timeSeries",
+        "stacked": false,
+        "stat": "Sum"
+      }
+    },
+    {
+      "height": 6,
+      "width": 6,
+      "y": 0,
+      "x": 18,
+      "type": "metric",
+      "properties": {
+        "metrics": [
+          [ "AWS/Lambda", "Duration", "FunctionName", "DeviceLambda" ],
+          [ ".", "ConcurrentExecutions", ".", "." ],
+          [ ".", "Throttles", ".", "." ]
+        ],
+        "sparkline": true,
+        "period": 60,
+        "region": "ap-south-1",
+        "title": "DeviceLambda - System",
+        "yAxis": {
+          "right": {
+            "max": 100
+          }
+        },
+        "view": "timeSeries",
+        "stacked": false,
+        "stat": "Sum"
+      }
+    },
+    {
+      "height": 6,
+      "width": 6,
+      "y": 6,
+      "x": 0,
+      "type": "metric",
+      "properties": {
+        "metrics": [
+          [ "AWS/Lambda", "Duration", "FunctionName", "FetchCustomersEcommerceInsightsLambda" ],
+          [ ".", "ConcurrentExecutions", ".", "." ],
+          [ ".", "Throttles", ".", "." ]
+        ],
+        "period": 60,
+        "region": "ap-south-1",
+        "title": "FetchCustomersEcommerceInsightsLambda - System",
+        "yAxis": {
+          "right": {
+            "max": 100
+          }
+        },
+        "view": "timeSeries",
+        "stacked": false,
+        "stat": "Sum"
+      }
+    },
+    {
+      "height": 6,
+      "width": 6,
+      "y": 6,
+      "x": 6,
+      "type": "metric",
+      "properties": {
+        "metrics": [
+          [ "AWS/Lambda", "Duration", "FunctionName", "CustomersEcommerceInsightsSQSEventLambda" ],
+          [ ".", "ConcurrentExecutions", ".", "." ],
+          [ ".", "Throttles", ".", "." ]
+        ],
+        "sparkline": true,
+        "period": 60,
+        "region": "ap-south-1",
+        "title": "CustomersEcommerceInsightsSQSEventLambda - System",
+        "yAxis": {
+          "right": {
+            "max": 100
+          }
+        },
+        "view": "timeSeries",
+        "stacked": false,
+        "stat": "Sum"
+      }
+    }
+  ]
+}
+}
