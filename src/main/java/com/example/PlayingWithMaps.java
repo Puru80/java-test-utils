@@ -6,13 +6,13 @@ import java.util.Map;
 public class PlayingWithMaps {
 
     public static void main(String[] args) {
-        Map<String, Integer > map = new HashMap<>();
+        Map<String, String > map = new HashMap<>();
 
-        map.put("Puru", 1);
+        map.put("Puru", "#1");
 
-        Integer i = map.get("Sanchit") ;
+        String str = map.get("Sanchit") ;
 
-        System.out.println(i);
+        System.out.println(str);
     }
 
 }
