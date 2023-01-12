@@ -1,6 +1,7 @@
 package com.example;
 
 import com.example.models.AvatarDescription;
+import com.example.models.AvatarEnum;
 import com.google.gson.Gson;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
@@ -149,8 +150,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-        someJson = someJson.replace(" ", "").trim();
-
-        System.out.println(someJson.replace("\n", ""));
+        System.out.println(AvatarEnum.DEURNAL.getLabel());
     }
 }

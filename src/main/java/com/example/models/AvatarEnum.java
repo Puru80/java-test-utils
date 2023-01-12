@@ -1,7 +1,10 @@
 package com.example.models;
 
+import lombok.Getter;
+
+@Getter
 public enum AvatarEnum {
-    DEURNAL("Deurnal"),
+    DEURNAL("Deurnal--11"),
     NOXX("Noxx"),
     SOLARK("Solark"),
     SUNDOWNIX("Sundownix"),
@@ -14,10 +17,10 @@ public enum AvatarEnum {
     FORTENOON("Fortenoon"),
     NIGHTFALT("Nightfalt");
 
-    private String name;
+    private String label;
 
-    private AvatarEnum(String name) {
-        this.name = name;
+    private AvatarEnum(String label) {
+        this.label = label;
     }
 
 }
