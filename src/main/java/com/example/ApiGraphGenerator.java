@@ -2,8 +2,9 @@ package com.example;
 
 public class ApiGraphGenerator {
 
-    public static String apiRoutes = "" ;
+    public static String apiRoutes = "";
 
+    //region apiWidgets
     public static String apiWidgets = "{\n" +
             "            \"height\": 6,\n" +
             "            \"width\": 6,\n" +
@@ -59,6 +60,7 @@ public class ApiGraphGenerator {
             "                \"title\": \"apiRoute - Latency\"\n" +
             "            }\n" +
             "        },";
+    //endregion
 
     public static void main(String[] args) {
 
