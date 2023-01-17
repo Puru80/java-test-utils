@@ -1,7 +1,5 @@
 package com.example;
 
-import java.util.Queue;
-
 public class SQSGraphGenerator {
 
     public static String queueNames = "";

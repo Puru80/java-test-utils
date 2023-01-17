@@ -2,19 +2,10 @@ package com.example;
 
 public class LambdaGraphGenerator {
 
-    private static String lambdas = "EmailServiceLambda\n" +
-            "GmailUserMailboxServiceLambda\n" +
-            "GmailUserServiceLambda\n" +
-            "HandleNewFmailLambda\n" +
-            "WatchSchedulerLambda\n" +
-            "GmailSubscriptionHTTPEventHandler\n" +
-            "InboxFeedService\n" +
-            "EmailCategorizationEventHandler\n" +
-            "EmailAttachmentHandler\n" +
-            "EmailComposeHandler";
+    private static String lambdas = "" ;
 
-    //region lambdaWidgets
-    private static String lambdaWidgets = "{\n" +
+    //region lambdaWidgetsLambda
+    private static String lambdaWidgetsLambda = "{\n" +
             "            \"height\": 6,\n" +
             "            \"width\": 6,\n" +
             "            \"y\": 0,\n" +
@@ -57,11 +48,38 @@ public class LambdaGraphGenerator {
             "        },";
     //endregion
 
+
+    private static String lambdaWidgetsSystem = "{\n" +
+            "            \"height\": 6,\n" +
+            "            \"width\": 6,\n" +
+            "            \"y\": 0,\n" +
+            "            \"x\": 12,\n" +
+            "            \"type\": \"metric\",\n" +
+            "            \"properties\": {\n" +
+            "                \"metrics\": [\n" +
+            "                    [ \"AWS/Lambda\", \"Throttles\", \"FunctionName\", \"varr\", { \"color\": \"#2ca02c\" } ],\n" +
+            "                    [ \".\", \"ConcurrentExecutions\", \".\", \".\" ],\n" +
+            "                    [ \".\", \"Duration\", \".\", \".\", { \"color\": \"#1f77b4\" } ]\n" +
+            "                ],\n" +
+            "                \"period\": 60,\n" +
+            "                \"region\": \"ap-south-1\",\n" +
+            "                \"title\": \"varr - System\",\n" +
+            "                \"yAxis\": {\n" +
+            "                    \"right\": {\n" +
+            "                        \"max\": 100\n" +
+            "                    }\n" +
+            "                },\n" +
+            "                \"view\": \"timeSeries\",\n" +
+            "                \"stacked\": false,\n" +
+            "                \"stat\": \"Sum\"\n" +
+            "            }\n" +
+            "        }, ";
+
     public static void main(String[] args) {
         String[] lambdaArr = lambdas.split("\n");
 
         for(String str: lambdaArr) {
-            System.out.println(lambdaWidgets.replace("varr", str));
+            System.out.println(lambdaWidgetsSystem.replace("varr", str));
         }
 
         System.out.println();
