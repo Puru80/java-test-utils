@@ -64,10 +64,10 @@ public class ApiGraphGenerator {
 
     public static void main(String[] args) {
 
-        String[] apiArr = apiRoutes.split("\n");
+        String [] apiArr = apiRoutes.split("\n");
 
         for (String str : apiArr) {
-            String arr[] = str.split("\t");
+            String [] arr = str.split("\t");
 
             String apiId = arr[0];
             String method = arr[1];

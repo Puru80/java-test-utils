@@ -2,7 +2,7 @@ package com.example;
 
 public class SQSGraphGenerator {
 
-    public static String queueNames = "";
+    public static String queueNames = "" ;
 
     //region sqsWidgets
     public static String sqsWidget = "{\n" +
