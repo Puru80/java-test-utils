@@ -10,7 +10,7 @@ public class RegexTest {
     public static final Logger logger = Logger.getLogger("RegexTest");
 
     public static void main(String[] args) {
-        System.out.println(isEmailAddressIgnorable("no-reply@alerts.sbi.co.in"));
+        System.out.println(isEmailAddressIgnorable("no-reply@mail.fabindia.info"));
     }
 
     private static boolean isEmailAddressIgnorable(String emailId) {
@@ -23,7 +23,7 @@ public class RegexTest {
         String fromAddressDomainEnd = StringUtils.substringAfter(emailId, "@");
         fetchEmailDomainRegexPattern(fromAddressDomainEnd, possibleStrings);
 
-        List<String> list = List.of("@*.sbi.*");
+//        List<String> list = List.of("@*.sbi.*");
 
         for (String val : possibleStrings) {
             System.out.println(val);

@@ -2,7 +2,14 @@ package com.example;
 
 public class LambdaGraphGenerator {
 
-    private static String lambdas = "" ;
+    private static String lambdas = "\n" +
+            "UsersLambda\n" +
+            "WaitlistLambda\n" +
+            "ReferralLambda\n" +
+            "DeviceLambda\n" +
+            "UserFeedsEventHandler\n"+
+            "FetchCustomersEcommerceInsightsLambda\n" +
+            "CustomersEcommerceInsightsSQSEventLambda" ;
 
     //region lambdaWidgetsLambda
     private static String lambdaWidgetsLambda = "{\n" +
@@ -50,30 +57,26 @@ public class LambdaGraphGenerator {
 
 
     private static String lambdaWidgetsSystem = "{\n" +
-            "            \"height\": 6,\n" +
-            "            \"width\": 6,\n" +
-            "            \"y\": 0,\n" +
-            "            \"x\": 12,\n" +
-            "            \"type\": \"metric\",\n" +
-            "            \"properties\": {\n" +
-            "                \"metrics\": [\n" +
-            "                    [ \"AWS/Lambda\", \"Throttles\", \"FunctionName\", \"varr\", { \"color\": \"#2ca02c\" } ],\n" +
-            "                    [ \".\", \"ConcurrentExecutions\", \".\", \".\" ],\n" +
-            "                    [ \".\", \"Duration\", \".\", \".\", { \"color\": \"#1f77b4\" } ]\n" +
-            "                ],\n" +
-            "                \"period\": 60,\n" +
-            "                \"region\": \"ap-south-1\",\n" +
-            "                \"title\": \"varr - System\",\n" +
-            "                \"yAxis\": {\n" +
-            "                    \"right\": {\n" +
-            "                        \"max\": 100\n" +
-            "                    }\n" +
-            "                },\n" +
-            "                \"view\": \"timeSeries\",\n" +
-            "                \"stacked\": false,\n" +
-            "                \"stat\": \"Sum\"\n" +
-            "            }\n" +
-            "        }, ";
+            "    \"metrics\": [\n" +
+            "        [ \"AWS/Lambda\", \"Duration\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#8c564b\" } ],\n" +
+            "        [ \"AWS/Lambda\", \"ConcurrentExecutions\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#ff7f0e\" } ],\n" +
+            "        [ \"AWS/Lambda\", \"Throttles\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#2ca02c\" } ],\n" +
+            "        [ \"AWS/Lambda\", \"Errors\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#d62728\" } ],\n" +
+            "        [ \"AWS/Lambda\", \"Invocations\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"color\": \"#1f77b4\" } ]\n" +
+            "    ],\n" +
+            "    \"sparkline\": true,\n" +
+            "    \"period\": 60,\n" +
+            "    \"region\": \"ap-south-1\",\n" +
+            "    \"title\": \"{resName} - System\",\n" +
+            "    \"yAxis\": {\n" +
+            "        \"right\": {\n" +
+            "            \"max\": 100\n" +
+            "        }\n" +
+            "    },\n" +
+            "    \"view\": \"timeSeries\",\n" +
+            "    \"stacked\": false,\n" +
+            "    \"stat\": \"Sum\"\n" +
+            "}, ";
 
     public static void main(String[] args) {
         String[] lambdaArr = lambdas.split("\n");
