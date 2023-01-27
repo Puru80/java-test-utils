@@ -4545,5 +4545,191 @@
       }
     }
   ]
-}
+},
+
+  "lambdaDashboardCloudwatchTemplate": {
+    "widgets": [
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "WaitlistLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "WaitlistLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "UsersLambda", "Resource", "UsersLambda", { "color": "#8c564b" } ],
+            [ ".", "ConcurrentExecutions", ".", ".", ".", ".", { "color": "#ff7f0e" } ],
+            [ ".", "Throttles", ".", ".", ".", ".", { "color": "#2ca02c" } ],
+            [ ".", "Errors", ".", ".", ".", ".", { "color": "#d62728" } ],
+            [ ".", "Invocations", ".", ".", ".", ".", { "color": "#1f77b4" } ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "UsersLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "ReferralLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "ReferralLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 0,
+        "x": 18,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "DeviceLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "DeviceLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 0,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "FetchCustomersEcommerceInsightsLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "FetchCustomersEcommerceInsightsLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 6,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "CustomersEcommerceInsightsSQSEventLambda" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "CustomersEcommerceInsightsSQSEventLambda - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      },
+      {
+        "height": 6,
+        "width": 6,
+        "y": 6,
+        "x": 12,
+        "type": "metric",
+        "properties": {
+          "metrics": [
+            [ "AWS/Lambda", "Duration", "FunctionName", "PushNotificationsEventHandler" ],
+            [ ".", "ConcurrentExecutions", ".", "." ],
+            [ ".", "Throttles", ".", "." ]
+          ],
+          "sparkline": true,
+          "period": 60,
+          "region": "ap-south-1",
+          "title": "PushNotificationsEventHandler - System",
+          "yAxis": {
+            "right": {
+              "max": 100
+            }
+          },
+          "view": "timeSeries",
+          "stacked": false,
+          "stat": "Sum"
+        }
+      }
+    ]
+  }
 }

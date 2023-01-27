@@ -1,0 +1,2787 @@
+{
+
+  "AWSAlarmsCloudformationTemplate": {
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "53a97453-db57-4deb-9382-068000c2f606": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 40,
+          "y": 50
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "6fc1332d-4974-48cb-b171-5647829e5fcd": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 40,
+          "y": 130
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "b0da4217-a325-4450-987c-39432f171848": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 38,
+          "y": 214
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "0034eeb0-69df-4e85-8479-01b221853746": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 263,
+          "y": 59
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "095097f5-c130-4477-8211-31f767d3561a": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 273,
+          "y": 153
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "cffffc01-052a-484e-acb0-3615415a75d2": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 269,
+          "y": 245
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "c26fd055-3ffb-49a5-8457-7b351c805d6f": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 400,
+          "y": 62
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "ba6badef-cce1-4f8c-b4cb-26a91f25616c": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 403,
+          "y": 164
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "bb3b2587-6441-4e8b-8d36-f64da3cd921b": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 410,
+          "y": 260
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "80b48ba1-1ea2-4dd7-92ab-44b5e3d2dc6e": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 531,
+          "y": 64
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "10697a03-8d36-4cb2-9030-ae4ca66fcc4a": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 553,
+          "y": 165
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "825274f7-5d0b-4e1d-b45b-ccc697a55c91": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 570,
+          "y": 281
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "f08996b9-c221-4dd3-b8a7-9c2028eaf479": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 671,
+          "y": 69
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "e7c35224-c89c-40bb-9a1f-e92c57d03fc4": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 674,
+          "y": 163
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "1533906a-9e6f-4b70-ab79-29b24940632b": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 714,
+          "y": 267
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "0fd56fda-c1a5-4d41-8aa7-6e138251a733": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 835,
+          "y": 76
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "57fa8b0d-b7c4-4c40-9ad0-9c23f7599ac2": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 855,
+          "y": 181
+        },
+        "z": 0,
+        "embeds": []
+      }
+    }
+  },
+  "Resources": {
+    "CWA3W0MP": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/login - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/login"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/login"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/login"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "53a97453-db57-4deb-9382-068000c2f606"
+        }
+      }
+    },
+    "CWA45S00": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/validate-otp - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/validate-otp"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/validate-otp"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/validate-otp"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "6fc1332d-4974-48cb-b171-5647829e5fcd"
+        }
+      }
+    },
+    "CWA2SXDF": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/interest - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/interest"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/interest"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/interest"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "b0da4217-a325-4450-987c-39432f171848"
+        }
+      }
+    },
+    "CWA4E867": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/logout - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/logout"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/logout"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/logout"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "0034eeb0-69df-4e85-8479-01b221853746"
+        }
+      }
+    },
+    "CWA1AYDU": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/flash/create-account - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/flash/create-account"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/flash/create-account"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/flash/create-account"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "095097f5-c130-4477-8211-31f767d3561a"
+        }
+      }
+    },
+    "CWAO1SV": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/profile - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/profile"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/profile"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/profile"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "cffffc01-052a-484e-acb0-3615415a75d2"
+        }
+      }
+    },
+    "CWA20MXG": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/refresh-session - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/refresh-session"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/refresh-session"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/refresh-session"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "c26fd055-3ffb-49a5-8457-7b351c805d6f"
+        }
+      }
+    },
+    "CWA3Y97Z": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/deactivate - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/deactivate"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/deactivate"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/deactivate"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "ba6badef-cce1-4f8c-b4cb-26a91f25616c"
+        }
+      }
+    },
+    "CWA4PBB6": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/referral/update - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/referral/update"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/referral/update"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/referral/update"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "bb3b2587-6441-4e8b-8d36-f64da3cd921b"
+        }
+      }
+    },
+    "CWA2BGJ6": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/referral/fetch - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/referral/fetch"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/referral/fetch"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/referral/fetch"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "80b48ba1-1ea2-4dd7-92ab-44b5e3d2dc6e"
+        }
+      }
+    },
+    "CWA4VI1T": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/v1/users/invite/validate - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/validate"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/validate"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/validate"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "10697a03-8d36-4cb2-9030-ae4ca66fcc4a"
+        }
+      }
+    },
+    "CWA13K69": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/v1/users/invite/usage - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/usage"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/usage"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/usage"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "825274f7-5d0b-4e1d-b45b-ccc697a55c91"
+        }
+      }
+    },
+    "CWA1XPZ0": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/device/store - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/store"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/store"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/store"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "f08996b9-c221-4dd3-b8a7-9c2028eaf479"
+        }
+      }
+    },
+    "CWA49OS9": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/device/update - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/update"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/update"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/update"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "e7c35224-c89c-40bb-9a1f-e92c57d03fc4"
+        }
+      }
+    },
+    "CWAF81C": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/waitlist/fetch - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/waitlist/fetch"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/waitlist/fetch"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/waitlist/fetch"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "1533906a-9e6f-4b70-ab79-29b24940632b"
+        }
+      }
+    },
+    "CWA53G47": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/insights - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "0fd56fda-c1a5-4d41-8aa7-6e138251a733"
+        }
+      }
+    },
+    "CWA3B10R": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "/user/insights/brand/{brand} - Alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentrage",
+            "ReturnData": true,
+            "Expression": "((m2 + m3)/m1) * 100"
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights/brand/{brand}"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights/brand/{brand}"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights/brand/{brand}"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "5a5b3x6e13"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "57fa8b0d-b7c4-4c40-9ad0-9c23f7599ac2"
+        }
+      }
+    }
+  }
+},
+
+  "lambdaAlarmsCloudformation": {
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+      "UsersLambda - Alarm": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+          "AlarmName": "flash-stage-users-lambda-alarm",
+          "ActionsEnabled": true,
+          "OKActions": [],
+          "AlarmActions": [
+            "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+          ],
+          "InsufficientDataActions": [],
+          "Dimensions": [],
+          "EvaluationPeriods": 1,
+          "DatapointsToAlarm": 1,
+          "Threshold": 3,
+          "ComparisonOperator": "GreaterThanThreshold",
+          "TreatMissingData": "missing",
+          "Metrics": [
+            {
+              "Id": "e1",
+              "Label": "Error Percentage",
+              "ReturnData": true,
+              "Expression": "(m1/m2)*100"
+            },
+            {
+              "Id": "m1",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Errors",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "UsersLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "UsersLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            },
+            {
+              "Id": "m2",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Invocations",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "UsersLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "UsersLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            }
+          ]
+        }
+      },
+      "WaitlistLambda - Alarm": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+          "AlarmName": "flash-stage-users-lambda-alarm",
+          "ActionsEnabled": true,
+          "OKActions": [],
+          "AlarmActions": [
+            "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+          ],
+          "InsufficientDataActions": [],
+          "Dimensions": [],
+          "EvaluationPeriods": 1,
+          "DatapointsToAlarm": 1,
+          "Threshold": 3,
+          "ComparisonOperator": "GreaterThanThreshold",
+          "TreatMissingData": "missing",
+          "Metrics": [
+            {
+              "Id": "e1",
+              "Label": "Error Percentage",
+              "ReturnData": true,
+              "Expression": "(m1/m2)*100"
+            },
+            {
+              "Id": "m1",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Errors",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "WaitlistLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "WaitlistLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            },
+            {
+              "Id": "m2",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Invocations",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "WaitlistLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "WaitlistLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            }
+          ]
+        }
+      },
+      "ReferralLambda - Alarm": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+          "AlarmName": "flash-stage-users-lambda-alarm",
+          "ActionsEnabled": true,
+          "OKActions": [],
+          "AlarmActions": [
+            "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+          ],
+          "InsufficientDataActions": [],
+          "Dimensions": [],
+          "EvaluationPeriods": 1,
+          "DatapointsToAlarm": 1,
+          "Threshold": 3,
+          "ComparisonOperator": "GreaterThanThreshold",
+          "TreatMissingData": "missing",
+          "Metrics": [
+            {
+              "Id": "e1",
+              "Label": "Error Percentage",
+              "ReturnData": true,
+              "Expression": "(m1/m2)*100"
+            },
+            {
+              "Id": "m1",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Errors",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "ReferralLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "ReferralLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            },
+            {
+              "Id": "m2",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Invocations",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "ReferralLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "ReferralLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            }
+          ]
+        }
+      },
+      "DeviceLambda - Alarm": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+          "AlarmName": "flash-stage-users-lambda-alarm",
+          "ActionsEnabled": true,
+          "OKActions": [],
+          "AlarmActions": [
+            "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+          ],
+          "InsufficientDataActions": [],
+          "Dimensions": [],
+          "EvaluationPeriods": 1,
+          "DatapointsToAlarm": 1,
+          "Threshold": 3,
+          "ComparisonOperator": "GreaterThanThreshold",
+          "TreatMissingData": "missing",
+          "Metrics": [
+            {
+              "Id": "e1",
+              "Label": "Error Percentage",
+              "ReturnData": true,
+              "Expression": "(m1/m2)*100"
+            },
+            {
+              "Id": "m1",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Errors",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "DeviceLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "DeviceLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            },
+            {
+              "Id": "m2",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Invocations",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "DeviceLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "DeviceLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            }
+          ]
+        }
+      },
+      "UserFeedsEventHandler - Alarm": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+          "AlarmName": "flash-stage-users-lambda-alarm",
+          "ActionsEnabled": true,
+          "OKActions": [],
+          "AlarmActions": [
+            "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+          ],
+          "InsufficientDataActions": [],
+          "Dimensions": [],
+          "EvaluationPeriods": 1,
+          "DatapointsToAlarm": 1,
+          "Threshold": 3,
+          "ComparisonOperator": "GreaterThanThreshold",
+          "TreatMissingData": "missing",
+          "Metrics": [
+            {
+              "Id": "e1",
+              "Label": "Error Percentage",
+              "ReturnData": true,
+              "Expression": "(m1/m2)*100"
+            },
+            {
+              "Id": "m1",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Errors",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "UserFeedsEventHandler"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "UserFeedsEventHandler"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            },
+            {
+              "Id": "m2",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Invocations",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "UserFeedsEventHandler"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "UserFeedsEventHandler"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            }
+          ]
+        }
+      },
+      "FetchCustomersEcommerceInsightsLambda - Alarm": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+          "AlarmName": "flash-stage-users-lambda-alarm",
+          "ActionsEnabled": true,
+          "OKActions": [],
+          "AlarmActions": [
+            "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+          ],
+          "InsufficientDataActions": [],
+          "Dimensions": [],
+          "EvaluationPeriods": 1,
+          "DatapointsToAlarm": 1,
+          "Threshold": 3,
+          "ComparisonOperator": "GreaterThanThreshold",
+          "TreatMissingData": "missing",
+          "Metrics": [
+            {
+              "Id": "e1",
+              "Label": "Error Percentage",
+              "ReturnData": true,
+              "Expression": "(m1/m2)*100"
+            },
+            {
+              "Id": "m1",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Errors",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "FetchCustomersEcommerceInsightsLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "FetchCustomersEcommerceInsightsLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            },
+            {
+              "Id": "m2",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Invocations",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "FetchCustomersEcommerceInsightsLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "FetchCustomersEcommerceInsightsLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            }
+          ]
+        }
+      },
+      "CustomersEcommerceInsightsSQSEventLambda - Alarm": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+          "AlarmName": "flash-stage-users-lambda-alarm",
+          "ActionsEnabled": true,
+          "OKActions": [],
+          "AlarmActions": [
+            "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+          ],
+          "InsufficientDataActions": [],
+          "Dimensions": [],
+          "EvaluationPeriods": 1,
+          "DatapointsToAlarm": 1,
+          "Threshold": 3,
+          "ComparisonOperator": "GreaterThanThreshold",
+          "TreatMissingData": "missing",
+          "Metrics": [
+            {
+              "Id": "e1",
+              "Label": "Error Percentage",
+              "ReturnData": true,
+              "Expression": "(m1/m2)*100"
+            },
+            {
+              "Id": "m1",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Errors",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            },
+            {
+              "Id": "m2",
+              "ReturnData": false,
+              "MetricStat": {
+                "Metric": {
+                  "Namespace": "AWS/Lambda",
+                  "MetricName": "Invocations",
+                  "Dimensions": [
+                    {
+                      "Name": "FunctionName",
+                      "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                    },
+                    {
+                      "Name": "Resource",
+                      "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                    }
+                  ]
+                },
+                "Period": 60,
+                "Stat": "Sum"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+
+}

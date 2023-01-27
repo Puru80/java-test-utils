@@ -2,8 +2,7 @@ package com.example;
 
 public class LambdaGraphGenerator {
 
-    private static String lambdas = "\n" +
-            "UsersLambda\n" +
+    private static String lambdas = "UsersLambda\n" +
             "WaitlistLambda\n" +
             "ReferralLambda\n" +
             "DeviceLambda\n" +
@@ -57,32 +56,39 @@ public class LambdaGraphGenerator {
 
 
     private static String lambdaWidgetsSystem = "{\n" +
-            "    \"metrics\": [\n" +
-            "        [ \"AWS/Lambda\", \"Duration\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#8c564b\" } ],\n" +
-            "        [ \"AWS/Lambda\", \"ConcurrentExecutions\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#ff7f0e\" } ],\n" +
-            "        [ \"AWS/Lambda\", \"Throttles\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#2ca02c\" } ],\n" +
-            "        [ \"AWS/Lambda\", \"Errors\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"region\": \"ap-south-1\", \"color\": \"#d62728\" } ],\n" +
-            "        [ \"AWS/Lambda\", \"Invocations\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"color\": \"#1f77b4\" } ]\n" +
-            "    ],\n" +
-            "    \"sparkline\": true,\n" +
-            "    \"period\": 60,\n" +
-            "    \"region\": \"ap-south-1\",\n" +
-            "    \"title\": \"{resName} - System\",\n" +
-            "    \"yAxis\": {\n" +
-            "        \"right\": {\n" +
-            "            \"max\": 100\n" +
-            "        }\n" +
-            "    },\n" +
-            "    \"view\": \"timeSeries\",\n" +
-            "    \"stacked\": false,\n" +
-            "    \"stat\": \"Sum\"\n" +
-            "}, ";
+            "            \"height\": 6,\n" +
+            "            \"width\": 6,\n" +
+            "            \"y\": 0,\n" +
+            "            \"x\": 0,\n" +
+            "            \"type\": \"metric\",\n" +
+            "            \"properties\": {\n" +
+            "                \"metrics\": [\n" +
+            "                    [ \"AWS/Lambda\", \"Duration\", \"FunctionName\", \"{resName}\", \"Resource\", \"{resName}\", { \"color\": \"#8c564b\", \"stat\": \"Average\" } ],\n" +
+            "                    [ \".\", \"ConcurrentExecutions\", \".\", \".\", \".\", \".\", { \"color\": \"#ff7f0e\" } ],\n" +
+            "                    [ \".\", \"Throttles\", \".\", \".\", \".\", \".\", { \"color\": \"#2ca02c\" } ],\n" +
+            "                    [ \".\", \"Errors\", \".\", \".\", \".\", \".\", { \"color\": \"#d62728\" } ],\n" +
+            "                    [ \".\", \"Invocations\", \".\", \".\", \".\", \".\", { \"color\": \"#1f77b4\" } ]\n" +
+            "                ],\n" +
+            "                \"sparkline\": true,\n" +
+            "                \"period\": 60,\n" +
+            "                \"region\": \"ap-south-1\",\n" +
+            "                \"title\": \"{resName} - System\",\n" +
+            "                \"yAxis\": {\n" +
+            "                    \"right\": {\n" +
+            "                        \"max\": 100\n" +
+            "                    }\n" +
+            "                },\n" +
+            "                \"view\": \"timeSeries\",\n" +
+            "                \"stacked\": false,\n" +
+            "                \"stat\": \"Sum\"\n" +
+            "            }\n" +
+            "        }, ";
 
     public static void main(String[] args) {
         String[] lambdaArr = lambdas.split("\n");
 
         for(String str: lambdaArr) {
-            System.out.println(lambdaWidgetsSystem.replace("varr", str));
+            System.out.println(lambdaWidgetsSystem.replace("{resName}", str));
         }
 
         System.out.println();

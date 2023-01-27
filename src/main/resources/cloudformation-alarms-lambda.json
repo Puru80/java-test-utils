@@ -1,0 +1,495 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "UsersLambda - Alarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "flash-stage-users-lambda-alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentage",
+            "ReturnData": true,
+            "Expression": "(m1/m2)*100"
+          },
+          {
+            "Id": "m1",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Errors",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "UsersLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "UsersLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Invocations",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "UsersLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "UsersLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "WaitlistLambda - Alarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "flash-stage-users-lambda-alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentage",
+            "ReturnData": true,
+            "Expression": "(m1/m2)*100"
+          },
+          {
+            "Id": "m1",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Errors",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "WaitlistLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "WaitlistLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Invocations",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "WaitlistLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "WaitlistLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ReferralLambda - Alarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "flash-stage-users-lambda-alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentage",
+            "ReturnData": true,
+            "Expression": "(m1/m2)*100"
+          },
+          {
+            "Id": "m1",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Errors",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "ReferralLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "ReferralLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Invocations",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "ReferralLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "ReferralLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "DeviceLambda - Alarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "flash-stage-users-lambda-alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentage",
+            "ReturnData": true,
+            "Expression": "(m1/m2)*100"
+          },
+          {
+            "Id": "m1",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Errors",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "DeviceLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "DeviceLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Invocations",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "DeviceLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "DeviceLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "UserFeedsEventHandler - Alarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "flash-stage-users-lambda-alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentage",
+            "ReturnData": true,
+            "Expression": "(m1/m2)*100"
+          },
+          {
+            "Id": "m1",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Errors",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "UserFeedsEventHandler"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "UserFeedsEventHandler"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Invocations",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "UserFeedsEventHandler"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "UserFeedsEventHandler"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "FetchCustomersEcommerceInsightsLambda - Alarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "flash-stage-users-lambda-alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentage",
+            "ReturnData": true,
+            "Expression": "(m1/m2)*100"
+          },
+          {
+            "Id": "m1",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Errors",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "FetchCustomersEcommerceInsightsLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "FetchCustomersEcommerceInsightsLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Invocations",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "FetchCustomersEcommerceInsightsLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "FetchCustomersEcommerceInsightsLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "CustomersEcommerceInsightsSQSEventLambda - Alarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "flash-stage-users-lambda-alarm",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:137982551423:flash-stage-lambda-alarms-topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Error Percentage",
+            "ReturnData": true,
+            "Expression": "(m1/m2)*100"
+          },
+          {
+            "Id": "m1",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Errors",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m2",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/Lambda",
+                "MetricName": "Invocations",
+                "Dimensions": [
+                  {
+                    "Name": "FunctionName",
+                    "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                  },
+                  {
+                    "Name": "Resource",
+                    "Value": "CustomersEcommerceInsightsSQSEventLambda"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
