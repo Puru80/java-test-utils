@@ -10,10 +10,10 @@ public class LambdaAlarmTemplate {
             "FetchCustomersEcommerceInsightsLambda\n" +
             "CustomersEcommerceInsightsSQSEventLambda";
     
-    public static String template = "\"{resName} - Alarm\": {\n" +
+    public static String template = "\"{resName}Alarm\": {\n" +
             "        \"Type\": \"AWS::CloudWatch::Alarm\",\n" +
             "        \"Properties\": {\n" +
-            "          \"AlarmName\": \"flash-stage-users-lambda-alarm\",\n" +
+            "          \"AlarmName\": \"{resName} - Alarm\",\n" +
             "          \"ActionsEnabled\": true,\n" +
             "          \"OKActions\": [],\n" +
             "          \"AlarmActions\": [\n" +
