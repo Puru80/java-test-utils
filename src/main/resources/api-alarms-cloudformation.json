@@ -21,7 +21,7 @@
         "Metrics": [
           {
             "Id": "e1",
-            "Label": "Error Percentrage",
+            "Label": "Error Percentage",
             "ReturnData": true,
             "Expression": "((m2 + m3)/m1) * 100"
           },
