@@ -1,0 +1,2609 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "ApiGatewayUserLoginLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/login | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/login API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/login"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserValidateOtpLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/validate-otp | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/validate-otp API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/validate-otp"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 3000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserLogoutLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/logout | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/logout API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/logout"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 800,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserFlashCreateAccLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/flash/create-account | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/flash/create-account API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/flash/create-account"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 5000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserProfileLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/profile | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/profile API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/profile"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 5000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserRefreshSessionLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/refresh-session | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/refresh-session API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/refresh-session"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "PUT"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 5000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserInviteValidateLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /v1/users/invite/validate | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /v1/users/invite/validate API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/v1/users/invite/validate"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 500,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserInviteUsageLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /v1/users/invite/usage | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /v1/users/invite/usage API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/v1/users/invite/usage"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 3000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayDeviceStoreLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /device/store | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /device/store API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/device/store"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 2000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayDeviceUpdateLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /device/update | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /device/update API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/device/update"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 3000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserInsightsLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/insights | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/insights API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/insights"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 15000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserBrandInsightsLatencyHighCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/insights/brand/{brand} | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/insights/brand/{brand} API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/insights/brand/{brand}"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 2000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "ApiGatewayUserLogin5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/login | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/login API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/login"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/login"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserValidateOtp5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/validate-otp | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/validate-otp API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/validate-otp"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/validate-otp"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserLogout5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/logout | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/logout API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/logout"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/logout"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserFlashCreateAccount5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/flash/create-account | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/flash/create-account API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/flash/create-account"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/flash/create-account"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserProfile5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/profile | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/profile API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/profile"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/profile"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserRefreshSession5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/refresh-session | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/refresh-session API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/refresh-session"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/refresh-session"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserInviteValidate5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /v1/users/invite/validate | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /v1/users/invite/validate API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/validate"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/validate"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserInviteUsage5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /v1/users/invite/usage | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /v1/users/invite/usage API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/usage"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/usage"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayDeviceStore5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /device/store | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /device/store API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/store"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/store"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayDeviceUpdate5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /device/update | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /device/update API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/update"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/update"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserInsights5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/insights | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/insights API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserBrandInsights5xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/insights/brand/{brand} | 5xx_error%_high | Critical",
+        "AlarmDescription": "Check the 5xx_error%_high% in Prod for /user/insights/brand/{brand} API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "5xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights/brand/{brand}"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights/brand/{brand}"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserLogin4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/login | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check for the 4xx_error%_high% in Prod for /user/login CRITICAL API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/login"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/login"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserValidateOtp4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/validate-otp | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /user/validate-otp API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/validate-otp"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/validate-otp"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserLogout4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/logout | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /user/logout API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/logout"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/logout"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserFlashCreateAccount4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/flash/create-account | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /user/flash/create-account API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/flash/create-account"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 300,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/flash/create-account"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 300,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserProfile4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/profile | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /user/profile API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/profile"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/profile"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserRefreshSession4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/refresh-session | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /user/refresh-session API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/refresh-session"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/refresh-session"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserInviteValidate4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /v1/users/invite/validate | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /v1/users/invite/validate API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/validate"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/validate"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserInviteUsage4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /v1/users/invite/usage | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /v1/users/invite/usage API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/usage"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/v1/users/invite/usage"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayDeviceStore4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /device/store | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /device/store API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/store"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/store"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayDeviceUpdate4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /device/update | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /device/update API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/update"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/device/update"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "POST"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserInsights4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/insights | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /user/insights API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    },
+    "ApiGatewayUserBrandInsights4xxErrorCritical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API GATEWAY | /user/insights/brand/{brand} | 4xx_error%_high | Critical",
+        "AlarmDescription": "Check the 4xx_error%_high% in Prod for /user/insights/brand/{brand} API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [],
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 20,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "Metrics": [
+          {
+            "Id": "e1",
+            "Label": "Expression1",
+            "ReturnData": true,
+            "Expression": "100*(m3/m1)"
+          },
+          {
+            "Id": "m3",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "4xx",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights/brand/{brand}"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          },
+          {
+            "Id": "m1",
+            "Label": "Invocations",
+            "ReturnData": false,
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/ApiGateway",
+                "MetricName": "Count",
+                "Dimensions": [
+                  {
+                    "Name": "Resource",
+                    "Value": "/user/insights/brand/{brand}"
+                  },
+                  {
+                    "Name": "Stage",
+                    "Value": "$default"
+                  },
+                  {
+                    "Name": "Method",
+                    "Value": "GET"
+                  },
+                  {
+                    "Name": "ApiId",
+                    "Value": "ju6maoy9o2"
+                  }
+                ]
+              },
+              "Period": 60,
+              "Stat": "Sum"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
