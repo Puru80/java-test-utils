@@ -2,13 +2,13 @@ package com.example;
 
 public class ApiGraphGenerator {
 
-    public static String apiRoutes = "";
+    public static String apiRoutes = "ju6maoy9o2 GET /referral/fetch";
 
     //region apiWidgets
     public static String apiWidgets = "{\n" +
             "            \"height\": 6,\n" +
             "            \"width\": 6,\n" +
-            "            \"y\": 0,\n" +
+            "            \"y\": 190,\n" +
             "            \"x\": 1,\n" +
             "            \"type\": \"metric\",\n" +
             "            \"properties\": {\n" +
@@ -26,7 +26,7 @@ public class ApiGraphGenerator {
             "        {\n" +
             "            \"height\": 6,\n" +
             "            \"width\": 6,\n" +
-            "            \"y\": 0,\n" +
+            "            \"y\": 180,\n" +
             "            \"x\": 9,\n" +
             "            \"type\": \"metric\",\n" +
             "            \"properties\": {\n" +
@@ -45,7 +45,7 @@ public class ApiGraphGenerator {
             "        {\n" +
             "            \"height\": 6,\n" +
             "            \"width\": 6,\n" +
-            "            \"y\": 0,\n" +
+            "            \"y\": 180,\n" +
             "            \"x\": 17,\n" +
             "            \"type\": \"metric\",\n" +
             "            \"properties\": {\n" +
@@ -67,7 +67,7 @@ public class ApiGraphGenerator {
         String [] apiArr = apiRoutes.split("\n");
 
         for (String str : apiArr) {
-            String [] arr = str.split("\t");
+            String [] arr = str.split(" ");
 
             String apiId = arr[0];
             String method = arr[1];

@@ -1,22 +1,456 @@
 {
-  "Records": [
-    {
-      "EventSource": "aws:sns",
-      "EventVersion": "1.0",
-      "EventSubscriptionArn": "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic:d981a586-8773-4e6a-a692-c8a5560c1256",
-      "Sns": {
-        "Type": "Notification",
-        "MessageId": "b47e308e-b6a8-5299-8909-6ce3ec151858",
-        "TopicArn": "arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic",
-        "Subject": "ALARM: \"/user/validate-otp - Alarm \" in Asia Pacific (Mumbai)",
-        "Message": "{\"AlarmName\":\"/user/validate-otp - Alarm\",\"AlarmDescription\":null,\"AWSAccountId\":\"137982551423\",\"AlarmConfigurationUpdatedTimestamp\":\"2023-02-20T11:23:14.034+0000\",\"NewStateValue\":\"ALARM\",\"NewStateReason\":\"Threshold Crossed: 1 out of the last 1 datapoints [100.0 (20/02/23 11:23:00)] was greater than the threshold (3.0) (minimum 1 datapoint for OK -> ALARM transition).\",\"StateChangeTime\":\"2023-02-20T11:24:45.258+0000\",\"Region\":\"Asia Pacific (Mumbai)\",\"AlarmArn\":\"arn:aws:cloudwatch:ap-south-1:137982551423:alarm:/user/validate-otp - Alarm\",\"OldStateValue\":\"OK\",\"OKActions\":[],\"AlarmActions\":[\"arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic\"],\"InsufficientDataActions\":[],\"Trigger\":{\"Period\":60,\"EvaluationPeriods\":1,\"DatapointsToAlarm\":1,\"ComparisonOperator\":\"GreaterThanThreshold\",\"Threshold\":3.0,\"TreatMissingData\":\"notBreaching\",\"EvaluateLowSampleCountPercentile\":\"\",\"Metrics\":[{\"Expression\":\"((m2 + m3)/m1) * 100\",\"Id\":\"e1\",\"Label\":\"Error Percentrage\",\"ReturnData\":true},{\"Id\":\"m2\",\"MetricStat\":{\"Metric\":{\"Dimensions\":[{\"value\":\"/user/validate-otp\",\"name\":\"Resource\"},{\"value\":\"$default\",\"name\":\"Stage\"},{\"value\":\"POST\",\"name\":\"Method\"},{\"value\":\"5a5b3x6e13\",\"name\":\"ApiId\"}],\"MetricName\":\"4xx\",\"Namespace\":\"AWS/ApiGateway\"},\"Period\":60,\"Stat\":\"Sum\"},\"ReturnData\":false},{\"Id\":\"m3\",\"MetricStat\":{\"Metric\":{\"Dimensions\":[{\"value\":\"/user/validate-otp\",\"name\":\"Resource\"},{\"value\":\"$default\",\"name\":\"Stage\"},{\"value\":\"POST\",\"name\":\"Method\"},{\"value\":\"5a5b3x6e13\",\"name\":\"ApiId\"}],\"MetricName\":\"5xx\",\"Namespace\":\"AWS/ApiGateway\"},\"Period\":60,\"Stat\":\"Sum\"},\"ReturnData\":false},{\"Id\":\"m1\",\"Label\":\"Invocations\",\"MetricStat\":{\"Metric\":{\"Dimensions\":[{\"value\":\"/user/validate-otp\",\"name\":\"Resource\"},{\"value\":\"$default\",\"name\":\"Stage\"},{\"value\":\"POST\",\"name\":\"Method\"},{\"value\":\"5a5b3x6e13\",\"name\":\"ApiId\"}],\"MetricName\":\"Count\",\"Namespace\":\"AWS/ApiGateway\"},\"Period\":60,\"Stat\":\"Sum\"},\"ReturnData\":false}]}}",
-        "Timestamp": "2023-02-20T11:24:45.293Z",
-        "SignatureVersion": "1",
-        "Signature": "UVc3ge9He/zeeQeN98j3j54HERahqq8ux2acJDZZluGqhtTK0Hh1Uy4BpgNusgWw44ZiDQ+wECjhJX4IpMErZ3hI8ktJXCU9eBtwnQHP0d5LFBwuYxsi9gCLOT5ojnVg/qMdCNFK3EppfEu5Ra6um8VC7FUmRb/fV+XSrIIhhKGc1b1FIYxAqe8dVH+/Zg3n/lg16IgcwvwWod0tA7ZXtvAxyvlE+hvHRTvbR255Y1pnyZ7KsWJdtUAPypn97H1XSuGVHGq8plRnJE/WhIn+f5QAlxkXi1ndjtYSsy4kQAWiYrwQXHBVuOE95mEvtW6d7IEhoskIEpGQFIKrNT4+8Q==",
-        "SigningCertUrl": "https://sns.ap-south-1.amazonaws.com/SimpleNotificationService-56e67fcb41f6fec09b0196692625d385.pem",
-        "UnsubscribeUrl": "https://sns.ap-south-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:ap-south-1:137982551423:flash-stage-user-alarms-topic:d981a586-8773-4e6a-a692-c8a5560c1256",
-        "MessageAttributes": {}
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "API | /user/validate-otp | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /user/validate-otp | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/validate-otp API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/validate-otp"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /user/logout | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /user/logout | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/logout API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/logout"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /user/flash/create-account | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /user/flash/create-account | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/flash/create-account API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/flash/create-account"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /user/profile | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /user/profile | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/profile API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/profile"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /user/refresh-session | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /user/refresh-session | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/refresh-session API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/refresh-session"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "PUT"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /v1/users/invite/validate | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /v1/users/invite/validate | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /v1/users/invite/validate API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/v1/users/invite/validate"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /v1/users/invite/usage | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /v1/users/invite/usage | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /v1/users/invite/usage API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/v1/users/invite/usage"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /device/store | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /device/store | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /device/store API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/device/store"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /device/update | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /device/update | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /device/update API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/device/update"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "POST"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /user/insights | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /user/insights | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/insights API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/insights"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
+      }
+    },
+    "API | /user/insights/brand/{brand} | latency_high | Critical": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "API | /user/insights/brand/{brand} | latency_high | Critical",
+        "AlarmDescription": "Check the Latency in Prod for /user/insights/brand/{brand} API.",
+        "ActionsEnabled": true,
+        "OKActions": [],
+        "AlarmActions": [
+          "arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic"
+        ],
+        "InsufficientDataActions": [],
+        "MetricName": "Latency",
+        "Namespace": "AWS/ApiGateway",
+        "ExtendedStatistic": "p99",
+        "Dimensions": [
+          {
+            "Name": "Resource",
+            "Value": "/user/insights/brand/{brand}"
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          },
+          {
+            "Name": "Method",
+            "Value": "GET"
+          },
+          {
+            "Name": "ApiId",
+            "Value": "ju6maoy9o2"
+          }
+        ],
+        "Period": 60,
+        "EvaluationPeriods": 3,
+        "DatapointsToAlarm": 3,
+        "Threshold": 10000,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "missing",
+        "EvaluateLowSampleCountPercentile": "ignore"
       }
     }
-  ]
+  }
 }
