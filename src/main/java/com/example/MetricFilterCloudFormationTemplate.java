@@ -15,18 +15,18 @@ public class MetricFilterCloudFormationTemplate {
             "/user/insights GET UserInsights\n" +
             "/user/insights/brand/{brand} GET UserBrandInsights\n";
 
-    public static String resourceTemplate = "\"{resName}401MetricFilter\": {\n" +
+    public static String resourceTemplate = "\"{resName}404MetricFilter\": {\n" +
             "      \"Type\": \"AWS::Logs::MetricFilter\",\n" +
             "      \"Properties\": {\n" +
             "        \"LogGroupName\": \"/aws/ApiGateway/FlashAppGatewayLogs\",\n" +
-            "        \"FilterPattern\": \"{$.routeKey = \\\"{method} {api}\\\" && $.status = 401}\",\n" +
-            "        \"FilterName\": \"{resName}401MetricFilter\", \n" +
+            "        \"FilterPattern\": \"{$.routeKey = \\\"{method} {api}\\\" && $.status = 404}\",\n" +
+            "        \"FilterName\": \"{resName}404MetricFilter\", \n" +
             "        \"MetricTransformations\": [\n" +
             "          {\n" +
             "            \"DefaultValue\": 0,\n" +
             "            \"MetricValue\": \"1\",\n" +
-            "            \"MetricNamespace\": \"FlashAppGateway/401s\",\n" +
-            "            \"MetricName\": \"{api} - 401Count\",\n" +
+            "            \"MetricNamespace\": \"FlashAppGateway/404s\",\n" +
+            "            \"MetricName\": \"{api} - 404Count\",\n" +
             "            \"Unit\": \"Count\"\n" +
             "          }\n" +
             "        ]\n" +

@@ -204,6 +204,414 @@
           }
         ]
       }
+    },
+    "UserLogin400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/login\" && $.status = 400}",
+        "FilterName": "UserLogin400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/login - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserValidateOtp400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/validate-otp\" && $.status = 400}",
+        "FilterName": "UserValidateOtp400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/validate-otp - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserLogout400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/logout\" && $.status = 400}",
+        "FilterName": "UserLogout400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/logout - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserFlashCreateAccount400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/flash/create-account\" && $.status = 400}",
+        "FilterName": "UserFlashCreateAccount400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/flash/create-account - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserProfile400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /user/profile\" && $.status = 400}",
+        "FilterName": "UserProfile400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/profile - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserRefreshSession400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"PUT /user/refresh-session\" && $.status = 400}",
+        "FilterName": "UserRefreshSession400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/refresh-session - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserInviteValidate400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /v1/users/invite/validate\" && $.status = 400}",
+        "FilterName": "UserInviteValidate400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/v1/users/invite/validate - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserInviteUsage400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /v1/users/invite/usage\" && $.status = 400}",
+        "FilterName": "UserInviteUsage400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/v1/users/invite/usage - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "DeviceStore400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /device/store\" && $.status = 400}",
+        "FilterName": "DeviceStore400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/device/store - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "DeviceUpdate400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /device/update\" && $.status = 400}",
+        "FilterName": "DeviceUpdate400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/device/update - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserInsights400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /user/insights\" && $.status = 400}",
+        "FilterName": "UserInsights400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/insights - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserBrandInsights400MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /user/insights/brand/{brand}\" && $.status = 400}",
+        "FilterName": "UserBrandInsights400MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/400s",
+            "MetricName": "/user/insights/brand/{brand} - 400Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserLogin404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/login\" && $.status = 404}",
+        "FilterName": "UserLogin404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/login - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserValidateOtp404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/validate-otp\" && $.status = 404}",
+        "FilterName": "UserValidateOtp404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/validate-otp - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserLogout404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/logout\" && $.status = 404}",
+        "FilterName": "UserLogout404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/logout - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserFlashCreateAccount404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /user/flash/create-account\" && $.status = 404}",
+        "FilterName": "UserFlashCreateAccount404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/flash/create-account - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserProfile404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /user/profile\" && $.status = 404}",
+        "FilterName": "UserProfile404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/profile - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserRefreshSession404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"PUT /user/refresh-session\" && $.status = 404}",
+        "FilterName": "UserRefreshSession404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/refresh-session - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserInviteValidate404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /v1/users/invite/validate\" && $.status = 404}",
+        "FilterName": "UserInviteValidate404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/v1/users/invite/validate - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserInviteUsage404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /v1/users/invite/usage\" && $.status = 404}",
+        "FilterName": "UserInviteUsage404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/v1/users/invite/usage - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "DeviceStore404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /device/store\" && $.status = 404}",
+        "FilterName": "DeviceStore404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/device/store - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "DeviceUpdate404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"POST /device/update\" && $.status = 404}",
+        "FilterName": "DeviceUpdate404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/device/update - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserInsights404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /user/insights\" && $.status = 404}",
+        "FilterName": "UserInsights404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/insights - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
+    },
+    "UserBrandInsights404MetricFilter": {
+      "Type": "AWS::Logs::MetricFilter",
+      "Properties": {
+        "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
+        "FilterPattern": "{$.routeKey = \"GET /user/insights/brand/{brand}\" && $.status = 404}",
+        "FilterName": "UserBrandInsights404MetricFilter",
+        "MetricTransformations": [
+          {
+            "DefaultValue": 0,
+            "MetricValue": "1",
+            "MetricNamespace": "FlashAppGateway/404s",
+            "MetricName": "/user/insights/brand/{brand} - 404Count",
+            "Unit": "Count"
+          }
+        ]
+      }
     }
   }
 }
