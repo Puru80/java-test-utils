@@ -6,6 +6,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"POST /user/login\" && $.status = 401}",
+        "FilterName": "UserLogin401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -22,6 +23,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"POST /user/validate-otp\" && $.status = 401}",
+        "FilterName": "UserValidateOtp401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -38,6 +40,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"POST /user/logout\" && $.status = 401}",
+        "FilterName": "UserLogout401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -54,6 +57,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"POST /user/flash/create-account\" && $.status = 401}",
+        "FilterName": "UserFlashCreateAccount401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -70,6 +74,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"GET /user/profile\" && $.status = 401}",
+        "FilterName": "UserProfile401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -86,6 +91,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"PUT /user/refresh-session\" && $.status = 401}",
+        "FilterName": "UserRefreshSession401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -102,6 +108,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"POST /v1/users/invite/validate\" && $.status = 401}",
+        "FilterName": "UserInviteValidate401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -118,6 +125,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"GET /v1/users/invite/usage\" && $.status = 401}",
+        "FilterName": "UserInviteUsage401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -134,6 +142,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"POST /device/store\" && $.status = 401}",
+        "FilterName": "DeviceStore401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -150,6 +159,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"POST /device/update\" && $.status = 401}",
+        "FilterName": "DeviceUpdate401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -166,6 +176,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"GET /user/insights\" && $.status = 401}",
+        "FilterName": "UserInsights401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,
@@ -182,6 +193,7 @@
       "Properties": {
         "LogGroupName": "/aws/ApiGateway/FlashAppGatewayLogs",
         "FilterPattern": "{$.routeKey = \"GET /user/insights/brand/{brand}\" && $.status = 401}",
+        "FilterName": "UserBrandInsights401MetricFilter",
         "MetricTransformations": [
           {
             "DefaultValue": 0,

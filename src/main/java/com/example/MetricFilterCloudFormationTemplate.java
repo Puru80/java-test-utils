@@ -20,6 +20,7 @@ public class MetricFilterCloudFormationTemplate {
             "      \"Properties\": {\n" +
             "        \"LogGroupName\": \"/aws/ApiGateway/FlashAppGatewayLogs\",\n" +
             "        \"FilterPattern\": \"{$.routeKey = \\\"{method} {api}\\\" && $.status = 401}\",\n" +
+            "        \"FilterName\": \"{resName}401MetricFilter\", \n" +
             "        \"MetricTransformations\": [\n" +
             "          {\n" +
             "            \"DefaultValue\": 0,\n" +
