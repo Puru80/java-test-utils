@@ -42,7 +42,7 @@ public class CloudformationTemplate {
     public static final String API_RESOURCES = "GET /user/gmail-consent UserGmailConsent\n" +
             "POST /user/flash/reserve/send-otp FlashReserveSendOTP\n" +
             "POST /tracking/trackingMore/callback TrackingMoreCallback\n" +
-            "GET /v1/ops/ignore/promotional OpsIgnorePromotionalV1\n" +
+            /*"GET /v1/ops/ignore/promotional OpsIgnorePromotionalV1\n" +
             "GET /v1/ops/classify_type OpsClassifyTypeV1\n" +
             "GET /v1/ops/classifier/classifiers OpsClassifiersV1\n" +
             "POST /v1/ops/sender/{id}/address OpsSenderIdAddressV1\n" +
@@ -57,18 +57,18 @@ public class CloudformationTemplate {
             "GET /v1/ops/phrases/promotional OpsPhrasesPromotionalV1\n" +
             "GET /v1/ops/domains OpsDomainsV1\n" +
             "GET /v1/ops/phrases/transactional OpsPhrasesTransactionalV1\n" +
-            "GET /v1/ops/phrases/strategy OpsPhrasesStrategyV1\n" +
+            "GET /v1/ops/phrases/strategy OpsPhrasesStrategyV1\n" +*/
             "GET /v1/campaigns/streaks CampaignsStreaksV1\n" +
-            "POST /v1/ops/phrases/{id}/remove OpsPhrasesRemoveV1\n" +
-            "POST /v1/ops/sender OpsSenderV1Post\n" +
+            /*"POST /v1/ops/phrases/{id}/remove OpsPhrasesRemoveV1\n" +
+            "POST /v1/ops/sender OpsSenderV1Post\n" +*/
             "GET /entity EntityAPI\n" +
             "POST /v1/rewards/redeem RewardsRedeemV1\n" +
-            "GET /v1/ops/sender/{id}/classifier OpsSenderClassifierV1\n" +
+            /*"GET /v1/ops/sender/{id}/classifier OpsSenderClassifierV1\n" +
             "GET /v1/ops/sender/{sender}/domain OpsSenderDomainV1Get\n" +
             "GET /v1/ops/senders OpsSendersV1\n" +
             "GET /v1/ops/sender/address OpsSenderAddressV1\n" +
             "GET /v1/ops/sender OpsSenderV1Get\n" +
-            "GET /v1/ops/ignore/personal OpsIgnorePersonalV1\n" +
+            "GET /v1/ops/ignore/personal OpsIgnorePersonalV1\n" +*/
             "GET /user/insights UserInsights\n" +
             "GET /api/v2/entities/home EntitiesHomeV2\n" +
             "POST /v1/queues/{queueName}/emails/ack QueuesEmailsAckV1\n" +
@@ -85,7 +85,7 @@ public class CloudformationTemplate {
             "GET /user/gmail-consent-callback UserGmailConsentCallback \n" +
             "POST /user/flash/validate UserFlashValidate\n" +
             "POST /user/login UserLogin\n" +
-            "POST /v1/ops/sender/domain OpsSenderDomainV1Post\n" +
+            /*"POST /v1/ops/sender/domain OpsSenderDomainV1Post\n" +*/
             "GET /v1/rewards/summary RewardsSummaryV1\n" +
             "POST /user/validate-otp UserValidateOtp\n" +
             "POST /user/flash/create-account UserFlashCreateAccount\n" +
@@ -161,48 +161,95 @@ public class CloudformationTemplate {
     public static String template = "\"{resource}\": {\n" +
             "      \"Type\": \"AWS::CloudWatch::Alarm\",\n" +
             "      \"Properties\": {\n" +
-            "        \"AlarmName\": \"API GATEWAY | {resName} | latency_high | Critical\",\n" +
-            "        \"AlarmDescription\": \"Check the Latency in Prod for {resName} API.\",\n" +
+            "        \"AlarmName\": \"API GATEWAY | {resName} | 4xx_error%_high | Critical\",\n" +
+            "        \"AlarmDescription\": \"Check the 4xx_error%_high in Prod for {resName} API.\",\n" +
             "        \"ActionsEnabled\": true,\n" +
             "        \"OKActions\": [],\n" +
             "        \"AlarmActions\": [\n" +
             "          \"arn:aws:sns:ap-south-1:734835702833:Flash_Prod_CloudWatch_Alarms_Topic\"\n" +
             "        ],\n" +
             "        \"InsufficientDataActions\": [],\n" +
-            "        \"MetricName\": \"Latency\",\n" +
-            "        \"Namespace\": \"AWS/ApiGateway\",\n" +
-            "        \"ExtendedStatistic\": \"p90\",\n" +
-            "        \"Dimensions\": [\n" +
-            "          {\n" +
-            "            \"Name\": \"Resource\",\n" +
-            "            \"Value\": \"{resName}\"\n" +
-            "          },\n" +
-            "          {\n" +
-            "            \"Name\": \"Stage\",\n" +
-            "            \"Value\": \"$default\"\n" +
-            "          },\n" +
-            "          {\n" +
-            "            \"Name\": \"Method\",\n" +
-            "            \"Value\": \"{method}\"\n" +
-            "          },\n" +
-            "          {\n" +
-            "            \"Name\": \"ApiId\",\n" +
-            "            \"Value\": \"ju6maoy9o2\"\n" +
-            "          }\n" +
-            "        ],\n" +
-            "        \"Period\": 300,\n" +
+            "        \"Dimensions\": [],\n" +
             "        \"EvaluationPeriods\": 3,\n" +
             "        \"DatapointsToAlarm\": 3,\n" +
-            "        \"Threshold\": 10000,\n" +
+            "        \"Threshold\": 2,\n" +
             "        \"ComparisonOperator\": \"GreaterThanOrEqualToThreshold\",\n" +
             "        \"TreatMissingData\": \"missing\",\n" +
-            "        \"EvaluateLowSampleCountPercentile\": \"ignore\"\n" +
+            "        \"Metrics\": [\n" +
+            "          {\n" +
+            "            \"Id\": \"e1\",\n" +
+            "            \"Label\": \"Expression1\",\n" +
+            "            \"ReturnData\": true,\n" +
+            "            \"Expression\": \"100*(m3/m1)\"\n" +
+            "          },\n" +
+            "          {\n" +
+            "            \"Id\": \"m3\",\n" +
+            "            \"ReturnData\": false,\n" +
+            "            \"MetricStat\": {\n" +
+            "              \"Metric\": {\n" +
+            "                \"Namespace\": \"AWS/ApiGateway\",\n" +
+            "                \"MetricName\": \"4xx\",\n" +
+            "                \"Dimensions\": [\n" +
+            "                  {\n" +
+            "                    \"Name\": \"Resource\",\n" +
+            "                    \"Value\": \"{resName}\"\n" +
+            "                  },\n" +
+            "                  {\n" +
+            "                    \"Name\": \"Stage\",\n" +
+            "                    \"Value\": \"$default\"\n" +
+            "                  },\n" +
+            "                  {\n" +
+            "                    \"Name\": \"Method\",\n" +
+            "                    \"Value\": \"{method}\"\n" +
+            "                  },\n" +
+            "                  {\n" +
+            "                    \"Name\": \"ApiId\",\n" +
+            "                    \"Value\": \"ju6maoy9o2\"\n" +
+            "                  }\n" +
+            "                ]\n" +
+            "              },\n" +
+            "              \"Period\": 60,\n" +
+            "              \"Stat\": \"Sum\"\n" +
+            "            }\n" +
+            "          },\n" +
+            "          {\n" +
+            "            \"Id\": \"m1\",\n" +
+            "            \"Label\": \"Invocations\",\n" +
+            "            \"ReturnData\": false,\n" +
+            "            \"MetricStat\": {\n" +
+            "              \"Metric\": {\n" +
+            "                \"Namespace\": \"AWS/ApiGateway\",\n" +
+            "                \"MetricName\": \"Count\",\n" +
+            "                \"Dimensions\": [\n" +
+            "                  {\n" +
+            "                    \"Name\": \"Resource\",\n" +
+            "                    \"Value\": \"{resName}\"\n" +
+            "                  },\n" +
+            "                  {\n" +
+            "                    \"Name\": \"Stage\",\n" +
+            "                    \"Value\": \"$default\"\n" +
+            "                  },\n" +
+            "                  {\n" +
+            "                    \"Name\": \"Method\",\n" +
+            "                    \"Value\": \"{method}\"\n" +
+            "                  },\n" +
+            "                  {\n" +
+            "                    \"Name\": \"ApiId\",\n" +
+            "                    \"Value\": \"ju6maoy9o2\"\n" +
+            "                  }\n" +
+            "                ]\n" +
+            "              },\n" +
+            "              \"Period\": 60,\n" +
+            "              \"Stat\": \"Sum\"\n" +
+            "            }\n" +
+            "          }\n" +
+            "        ]\n" +
             "      }\n" +
-            "    },  ";
+            "    }, ";
 
 
     public static void main(String[] args) {
-        File file = new File("src/main/resources/api-alarms-latency-cf.json");
+        File file = new File("/Users/puruagarwal/dev/IdeaProjects/flash-alerts/api-gateway/api-gateway-4xx-alarms.json");
 
         String[] resArr = API_RESOURCES.split("\n");
 
@@ -223,7 +270,7 @@ public class CloudformationTemplate {
                 String resource = arr[2];
 
                 resource = "APIGateway".concat(resource);
-                resource = resource.concat("HighLatencyCritical");
+                resource = resource.concat("4xxErrorCritical");
 
                 template = template.replace("{resource}", resource);
                 template = template.replace("{resName}", apiRoute);
